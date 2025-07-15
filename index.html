@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perguntas Frequentes - Frontend Mentor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="faq-card">
+      <div class="faq-header">
+        <img src="images/icon-star.svg" alt="Ícone" class="faq-icon">
+        <h1>Perguntas Frequentes</h1>
+      </div>
+
+      <div class="faq">
+        <div class="faq-question active">
+          <h2>O que é o Frontend Mentor e como ele vai me ajudar?</h2>
+          <button class="toggle-btn">−</button>
+        </div>
+        <p class="faq-answer">
+          O Frontend Mentor oferece desafios realistas de codificação para ajudar desenvolvedores a melhorarem suas habilidades em HTML, CSS e JavaScript. É adequado para todos os níveis e ideal para montar portfólio.
+        </p>
+
+        <div class="faq-question">
+          <h2>O Frontend Mentor é gratuito?</h2>
+          <button class="toggle-btn">+</button>
+        </div>
+
+        <div class="faq-question">
+          <h2>Posso usar os projetos do Frontend Mentor no meu portfólio?</h2>
+          <button class="toggle-btn">+</button>
+        </div>
+
+        <div class="faq-question">
+          <h2>Como posso obter ajuda se eu ficar preso em um desafio?</h2>
+          <button class="toggle-btn">+</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const questions = document.querySelectorAll(".faq-question");
+
+    questions.forEach(q => {
+      q.addEventListener("click", () => {
+        questions.forEach(item => {
+          if (item !== q) item.classList.remove("active");
+        });
+        q.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>
